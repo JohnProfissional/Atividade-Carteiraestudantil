@@ -80,7 +80,9 @@
         android:textColorHighlight="@color/purple_500"
         android:textColorHint="@color/purple_500"
         android:textColorLink="@color/teal_200"
+        android:onClick="entrar"
         app:cornerRadius="20dp" />
+
 
     <TextView
         android:id="@+id/idTexto1"
