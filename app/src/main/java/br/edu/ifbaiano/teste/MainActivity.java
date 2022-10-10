@@ -11,8 +11,8 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText campo1;
-    private EditText campo2;
+    private EditText usuario;
+    private EditText senha;
     TextView tvCadastrar;
 
     /*
@@ -34,18 +34,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        campo1= (EditText) findViewById(R.id.idUsuario);
-        campo2= (EditText) findViewById(R.id.idSenha2);
-
+        usuario= (EditText) findViewById(R.id.idUsuario);
+        senha= (EditText) findViewById(R.id.idSenha2);
 
     }
 
     public void entrar(View View){
-        if(campo1.getText().length() == 0){
-            campo1.setError("Campo obrigatório!");
+        if(usuario.getText().length() == 0){
+            usuario.setError("Campo obrigatório!");
         }
-        if(campo2.getText().length() == 0){
-            campo2.setError("Campo obrigatório!");
+        if(senha.getText().length() == 0){
+            senha.setError("Campo obrigatório!");
         }
     }
 }
