@@ -9,11 +9,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.view.View;
 import android.widget.TextView;
+import br.edu.ifbaiano.teste.helper.DBHelper;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText usuario;
-    private EditText senha;
+    private EditText username;
+    private EditText password;
     TextView tvCadastrar;
+
+    DBHelper myDB;
 
     /*
      * Primeiro método a ser executado quando uma Activity (tela) é chamada.
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.telalogin);
         //Método responsável por pegar em tempo de execução o objeto ActionBar e posteriormente ocultá-lo.
         getSupportActionBar().hide();
@@ -34,17 +38,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        usuario= (EditText) findViewById(R.id.idUsuario);
-        senha= (EditText) findViewById(R.id.idSenha2);
+        username= (EditText) findViewById(R.id.idUsuario);
+        password= (EditText) findViewById(R.id.idSenha2);
 
     }
 
     public void entrar(View View){
-        if(usuario.getText().length() == 0){
-            usuario.setError("Campo obrigatório!");
+        if(username.getText().length() == 0){
+            username.setError("Campo obrigatório!");
         }
-        if(senha.getText().length() == 0){
-            senha.setError("Campo obrigatório!");
+        if(password.getText().length() == 0){
+            password.setError("Campo obrigatório!");
         }
     }
 }
